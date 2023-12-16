@@ -7,6 +7,11 @@ namespace NiceCreamClone.Canvases
     public class SettingsCanvas : MonoBehaviour
     {
 
+
+        public void Initialize()
+		{
+
+		}
         void Start()
         {
 
