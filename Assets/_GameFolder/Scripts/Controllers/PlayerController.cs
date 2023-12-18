@@ -7,8 +7,7 @@ namespace NiceCreamClone.Controllers
 {
 	public class PlayerController : MonoBehaviour
 	{
-		public GameObject playerPrefab;
-		public Vector3 playerStartPosition;
+
 		public void Initialize()
 		{
 			Debug.Log("Player initialized!");
@@ -27,13 +26,10 @@ namespace NiceCreamClone.Controllers
 
 		private void OnGameStart()
 		{
-			CreatePlayer(playerStartPosition);
+			
 		}
 
-		private void CreatePlayer(Vector3 startPosition)
-		{
-			var player = Instantiate(playerPrefab, startPosition, Quaternion.identity);
-		}
+		
 	}
 }
 

@@ -12,7 +12,7 @@ namespace NiceCreamClone.Managers
 
 		private CameraController _cameraController;
 		public bool isInputEnabled { get; private set; } = true;
-		private bool _isFirstDraging;
+
 		private bool _isDragging;
 		private Vector3 _firstTouchPosition;
 		private Vector3 _lastTouchPosition;
@@ -43,7 +43,6 @@ namespace NiceCreamClone.Managers
 			{
 				_isDragging = true;
 				_firstTouchPosition = Input.mousePosition;
-				_isFirstDraging = true;
 			}
 		}
 

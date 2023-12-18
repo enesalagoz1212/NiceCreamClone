@@ -26,7 +26,9 @@ namespace NiceCreamClone.Managers
 		[SerializeField] private UiManager uiManager;
 		[SerializeField] private InputManager inputManager;
 		[SerializeField] private CameraController cameraController;
-
+		[SerializeField] private CustomerController customerController;
+		[SerializeField] private Customer customer;
+		[SerializeField] private Player player;
 		private void Awake()
 		{
 			if (Instance != null && Instance != this)
@@ -47,10 +49,14 @@ namespace NiceCreamClone.Managers
 		private void GameInitialize()
 		{
 			playerController.Initialize();
-			levelManager.Initialize();
+			levelManager.Initialize(customer);
 			uiManager.Initialize(inputManager);
 			inputManager.Initialize(cameraController);
 			cameraController.Initialize();
+			customerController.Initialize(levelManager);
+			customer.Initialize(levelManager,player);
+			player.Initialize();
+
 			ChangeState(GameState.Start);
 		}
 
